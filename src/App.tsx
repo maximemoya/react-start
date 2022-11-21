@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { aTestGen, dnaGenerator } from './core/generator/DnaGen';
 
-const name = "helloWorld"
+const gen = dnaGenerator(aTestGen)
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {name}: Edit <code>src/App.tsx</code> and save to reload.
+          {gen.name}_{gen.number} : Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
