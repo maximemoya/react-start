@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const name = "helloWorld420"
+const name = "helloWorld"
 
 function App() {
   return (
