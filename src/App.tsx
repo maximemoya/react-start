@@ -1,27 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { aTestGen, dnaGenerator } from './core/generator/DnaGen';
+import { Container, Heading, HeadingWithContent, List, TextWithNumber, MyHeaderClass } from './core/react_component/Welcome';
 
 const gen = dnaGenerator(aTestGen)
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {gen.name}_{gen.number} : Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Heading title="hello"></Heading>
+      <HeadingWithContent><strong>hello</strong></HeadingWithContent>
+      <Container>Foo</Container>
+      <TextWithNumber header={(num: number) => <span>Header {num}</span>}>
+        {(num: number) => <div>Today's number is {num}</div>}
+      </TextWithNumber>
+      <TextWithNumber>
+        {(num: number) => <div>Today's number is {num}</div>}
+      </TextWithNumber>
+      <List
+        items={["Jack", "John"]}
+        render={
+          (item: string) =>
+            <div>{item.toUpperCase()}</div>
+        }></List>
+        <MyHeaderClass title="Titre"/>
     </div>
   );
 }
