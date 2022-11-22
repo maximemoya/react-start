@@ -1,20 +1,26 @@
 type Gen = {
-    name:String
-    number:number
+    name: String
+    number: number
 }
 
-const generator = (genetic: Gen):Gen => {
-    genetic.name += "A"
-    genetic.number += 1
-    return genetic
+class GenClass implements Gen {
+    name: String = "Default"
+    number: number
+
+    constructor(number: number, name: String | null = null) {
+        if(name != null) this.name = name
+        this.number = number
+    }
+
 }
+
+const dnaGenerator = (number: number, name: String = ""): Gen =>
+    name === "" ? new GenClass(number) : new GenClass(number, name)
+
+const dnaGen = dnaGenerator(45)
 
 // -------------
 //  E X P O R T
 // -------------
 
-export const aTestGen:Gen = {
-    name: "",
-    number: 0
-}
-export const dnaGenerator = generator
+export const DnaGenerator = dnaGenerator
