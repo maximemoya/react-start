@@ -13,6 +13,7 @@ class GenClass implements Gen {
     }
 
 }
+const test = 1
 
 const dnaGenerator = (number: number, name: String = ""): Gen =>
     name === "" ? new GenClass(number) : new GenClass(number, name)
