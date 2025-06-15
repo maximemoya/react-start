@@ -1,0 +1,125 @@
+.info-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 250px;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.content-container {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.card-title {
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card-description {
+    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1;
+}
+
+.card-address {
+    margin: 0;
+    font-size: 1rem;
+    color: #888;
+    line-height: 1.5;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.image-container {
+    width: 250px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        flex-direction: column;
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content-container {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .card-address {
+        font-size: 0.9rem;
+        padding-top: 10px;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+}
