@@ -1,0 +1,59 @@
+/* Option 1: Soft and rounded */
+.cute-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 154, 158, 0.3);
+}
+
+.cute-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 154, 158, 0.4);
+}
+
+/* Option 2: Minimalist with emoji */
+.cute-link-minimal {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.cute-link-minimal:hover {
+    border-bottom-color: #6366f1;
+}
+
+.cute-link-minimal::before {
+    content: "✨ ";
+}
+
+/* Option 3: Button-like with heart */
+.cute-link-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fef3f3;
+    color: #e11d48;
+    text-decoration: none;
+    border: 2px solid #f9a8d4;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.cute-link-button:hover {
+    background: #fce7f3;
+    border-color: #ec4899;
+}
+
+.cute-link-button::after {
+    content: " 💕";
+}

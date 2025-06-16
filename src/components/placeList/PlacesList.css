@@ -1,7 +1,7 @@
 .places-list-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 200vh;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -30,7 +30,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0;
-    max-height: calc(100vh - 160px);
 }
 
 .places-list-scroll::-webkit-scrollbar {
@@ -64,9 +63,6 @@
         padding: 15px 0;
     }
 
-    .places-list-scroll {
-        max-height: calc(100vh - 140px);
-    }
 }
 
 @media (max-width: 480px) {
@@ -80,7 +76,4 @@
         padding: 10px 0;
     }
 
-    .places-list-scroll {
-        max-height: calc(100vh - 120px);
-    }
 }
